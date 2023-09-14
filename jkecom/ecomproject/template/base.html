@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"crossorigin="anonymous">
+    <meta name="description" content="{% block metadescription %}{% endblock %}">
+    <script src="https://kit.fontawesome.com/9cb207c716.js" crossorigin="anonymous"></script>
+    <title>{% block title %}
+        {% endblock %}</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+{% include 'header.html' %}
+{% include 'navbar.html' %}
+{% block content %}
+{% endblock %}
+</div>
+</div>
+<script class="col text-center my_footer" src="{% static 'js/popper.min.js' %}" ></script>
+<script class="col text-center my_footer" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<div class="align-items-content-start text-center">
+{% include 'footer.html' %}
+</div>
+</body>
+</html>
